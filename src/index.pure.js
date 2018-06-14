@@ -20,11 +20,21 @@ function sortByLengthPure(strings) {
 function lastTwoPure(numbers) {
   return numbers.slice().splice(-2);
 }
+
+function incrementYearPure(cars) {
+  return cars.map(camel => {
+    const freshCamel = { ...camel };
+    freshCamel.year++;
+    return freshCamel;
+  });
+}
+
 module.exports = {
   multiplyPure,
   absolutePure,
   concatNamesPure,
   numbersToStringsPure,
   sortByLengthPure,
-  lastTwoPure
+  lastTwoPure,
+  incrementYearPure
 };
